@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1019">
+<title>声场 SOUND FIELD · 露西壁纸版</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1019;--panel:#121a26;--panel2:#0e1621;--line:rgba(190,211,237,.11);--text:#f3f7fc;--muted:#8b9bb0;--accent:#50e3c2;--accent-soft:rgba(80,227,194,.13);--danger:#ff777f;--shadow:0 24px 80px rgba(0,0,0,.28)}
+*{box-sizing:border-box}html{min-height:100%;background:var(--bg)}body{margin:0;min-height:100vh;color:var(--text);font-family:Inter,"SF Pro Display","Segoe UI","Microsoft YaHei",system-ui,sans-serif;background:radial-gradient(ellipse at 48% -18%,rgba(48,88,120,.25),transparent 55%),radial-gradient(ellipse at 90% 72%,var(--accent-soft),transparent 32%),var(--bg);transition:background .35s ease;}
+button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.shell{width:min(1480px,100%);margin:auto;padding:clamp(18px,3vw,38px) clamp(16px,3vw,42px) 22px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:27px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:13px;min-width:0}.brand-mark{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;color:#071b20;background:linear-gradient(145deg,#76f3d0,#39b7d5);box-shadow:0 8px 28px rgba(57,183,213,.17);flex:none}.brand h1{font-size:19px;letter-spacing:.4px;margin:0;font-weight:760}.brand p{margin:4px 0 0;color:var(--muted);font-size:12px;letter-spacing:1.2px}.top-actions{display:flex;align-items:center;gap:10px}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:9px 13px;color:#b8c7d9;font-size:12px;white-space:nowrap;background:rgba(255,255,255,.025)}.dot{width:7px;height:7px;border-radius:100%;background:#65758a;box-shadow:0 0 0 4px rgba(101,117,138,.13)}.pill.live .dot{background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}.icon-btn{width:39px;height:39px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.035);color:#c5d1df;display:grid;place-items:center;transition:.2s}.icon-btn:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.08)}
+.intro{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;padding:29px 2px 24px}.eyebrow{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:2.3px;font-weight:800;display:flex;align-items:center;gap:9px}.eyebrow:before{content:"";width:22px;height:1px;background:var(--accent)}.intro h2{font-size:clamp(26px,3.1vw,43px);letter-spacing:-1.35px;line-height:1.12;margin:12px 0 9px;font-weight:780}.intro p{margin:0;color:var(--muted);font-size:14px;line-height:1.8;max-width:700px}.intro-right{display:flex;align-items:center;gap:9px;flex:none}.soft-label{font-size:12px;color:#9eb0c5;border:1px solid var(--line);background:rgba(255,255,255,.025);padding:10px 13px;border-radius:10px}
+.grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(300px,.92fr);gap:18px;align-items:stretch}.card{border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(21,31,45,.94),rgba(14,22,33,.96));box-shadow:var(--shadow);overflow:hidden}.meter-card{padding:clamp(20px,3vw,34px);position:relative;min-height:520px;display:flex;flex-direction:column}.meter-card:after{content:"";pointer-events:none;position:absolute;width:290px;height:290px;border-radius:50%;right:-140px;top:-165px;background:var(--accent-soft);filter:blur(18px)}.meter-head{display:flex;align-items:center;justify-content:space-between;gap:14px;position:relative;z-index:1}.section-kicker{color:#91a1b5;font-size:11px;letter-spacing:1.7px;text-transform:uppercase;font-weight:750}.mode-chip{border:1px solid var(--line);border-radius:8px;padding:7px 10px;color:#c0cedd;font-size:11px;background:rgba(255,255,255,.025);white-space:nowrap}.mode-chip.ready{color:var(--accent);border-color:rgba(80,227,194,.3);background:var(--accent-soft)}.reading-wrap{display:flex;justify-content:center;align-items:baseline;gap:12px;min-height:154px;margin:16px 0 4px;position:relative;z-index:1}.reading{font-size:clamp(92px,12vw,174px);font-weight:780;letter-spacing:-.09em;line-height:1;font-variant-numeric:tabular-nums;color:var(--text);text-shadow:0 0 45px rgba(80,227,194,.06);transition:color .25s}.unit{font-size:clamp(14px,1.7vw,21px);font-weight:650;color:#a8b8ca;white-space:nowrap;letter-spacing:.2px}.tier-row{display:flex;align-items:center;justify-content:center;gap:11px;min-height:39px;margin-bottom:19px}.tier-indicator{width:8px;height:8px;border-radius:100%;background:var(--accent);box-shadow:0 0 16px var(--accent)}.tier-name{font-size:clamp(15px,1.7vw,19px);font-weight:700;letter-spacing:.5px}.tier-note{font-size:12px;color:var(--muted);margin-left:3px}
+.gauge-wrap{position:relative;margin:0 0 6px;z-index:1}.gauge{width:100%;height:90px;display:block}.gauge-caption{display:flex;align-items:center;justify-content:space-between;margin-top:-1px;font-size:10px;color:#718198;letter-spacing:.4px}.stat-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:auto;padding-top:26px;gap:0}.stat{padding:0 15px;border-left:1px solid var(--line);min-width:0}.stat:first-child{padding-left:0;border-left:0}.stat:last-child{padding-right:0}.stat-label{font-size:11px;color:#8091a7;margin-bottom:8px;display:flex;align-items:center;gap:7px}.stat-value{font-size:18px;line-height:1.25;font-weight:680;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.stat-value small{font-size:10px;font-weight:500;color:#8a9bb0;margin-left:4px}.stat-sub{font-size:10px;color:#63758b;margin-top:5px}
+.side{display:flex;flex-direction:column;gap:18px}.control-card{padding:23px 23px 20px}.card-title-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:19px}.card-title{margin:0;font-weight:720;font-size:16px;letter-spacing:.1px}.small-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:rgba(255,255,255,.045);color:var(--accent);border:1px solid var(--line)}.field-label{display:flex;justify-content:space-between;gap:8px;color:#91a2b6;font-size:12px;margin-bottom:8px}.field-label span:last-child{color:#63758b;font-size:11px}.select,.number-input{width:100%;background:#0b121c;border:1px solid rgba(182,205,230,.15);border-radius:11px;padding:12px 13px;color:#e2ebf5;font-size:13px;outline:none;min-width:0}.select{appearance:auto}.number-input{appearance:textfield}.number-input::-webkit-inner-spin-button,.number-input::-webkit-outer-spin-button{appearance:none;margin:0}.field-help{color:#6f8197;font-size:11px;line-height:1.65;margin:8px 1px 17px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:11px;border:1px solid transparent;padding:12px 14px;font-size:13px;font-weight:750;transition:transform .15s,background .2s,border-color .2s}.btn:active{transform:translateY(1px)}.btn-primary{width:100%;background:linear-gradient(100deg,#68edc9,#45d0d6);color:#071b20;box-shadow:0 8px 25px rgba(64,203,191,.13)}.btn-primary:hover{filter:brightness(1.05)}.btn-primary.stop{background:linear-gradient(100deg,#ffb0a1,#ff777f);box-shadow:0 8px 25px rgba(255,119,127,.1)}.btn-secondary{background:rgba(255,255,255,.04);border-color:var(--line);color:#cfdae7}.btn-secondary:hover{background:rgba(255,255,255,.08)}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}.button-row{display:grid;grid-template-columns:1.2fr .8fr;gap:9px;margin-top:10px}.divider{height:1px;background:var(--line);margin:20px 0}.calibration-intro{display:flex;gap:11px;align-items:flex-start;margin-bottom:16px}.calibration-icon{color:#fac878;background:rgba(250,200,120,.1);border:1px solid rgba(250,200,120,.17);width:35px;height:35px;display:grid;place-items:center;border-radius:10px;flex:none}.calibration-intro strong{display:block;font-size:13px;margin:1px 0 5px}.calibration-intro p{margin:0;color:#71839a;font-size:11px;line-height:1.6}.calibration-field{display:grid;grid-template-columns:1fr 82px;gap:8px;align-items:center}.db-unit{border:1px solid var(--line);border-radius:10px;padding:12px 9px;text-align:center;font-size:12px;color:#9eafc3;background:rgba(255,255,255,.025)}.calibration-btn{width:100%;margin-top:9px}.cal-status{min-height:17px;margin-top:9px;color:#8293a8;font-size:11px;line-height:1.55}.cal-status.good{color:var(--accent)}.cal-status.error{color:var(--danger)}.progress-outer{height:3px;background:rgba(255,255,255,.06);border-radius:9px;overflow:hidden;margin-top:7px}.progress-inner{height:100%;width:0;background:var(--accent);transition:width .12s linear}.history-card{padding:19px 21px 14px;flex:1;min-height:155px}.history-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.history-top .card-title{font-size:14px}.history-legend{display:flex;align-items:center;gap:7px;color:#8293a8;font-size:10px}.history-legend i{display:inline-block;width:16px;height:2px;border-radius:4px;background:var(--accent)}.history-chart{width:100%;height:82px;display:block;margin-top:12px}.history-foot{display:flex;justify-content:space-between;gap:10px;color:#62758b;font-size:10px}.notice{margin-top:17px;border:1px solid rgba(245,190,100,.15);background:rgba(245,190,100,.045);border-radius:13px;padding:13px 15px;display:flex;align-items:flex-start;gap:11px;color:#9eacbd;font-size:11px;line-height:1.75}.notice svg{color:#e7bf72;flex:none;margin-top:1px}.notice strong{color:#d6deea;font-weight:650}.foot{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:20px 3px 0;color:#5f7187;font-size:10px;line-height:1.7}.foot b{color:#8293a8;font-weight:600}.error-box{display:none;margin-top:12px;padding:12px;border:1px solid rgba(255,119,127,.2);background:rgba(255,119,127,.06);border-radius:10px;color:#ffacb0;font-size:12px;line-height:1.65;white-space:pre-wrap}.error-box.show{display:block}.keyboard{font-size:10px;color:#6f8298}.key{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:1px 5px;color:#9aabc0;margin:0 2px}
+@media(max-width:980px){.grid{grid-template-columns:minmax(0,1fr) minmax(280px,.8fr)}.reading{font-size:clamp(80px,11vw,135px)}.meter-card{min-height:500px}.stat{padding:0 10px}.stat-value{font-size:15px}}
+@media(max-width:760px){.shell{padding:15px 13px 18px}.topbar{padding-bottom:17px}.brand-mark{width:39px;height:39px;border-radius:12px}.brand h1{font-size:16px}.brand p{font-size:10px;letter-spacing:.8px}.top-actions .pill{display:none}.intro{display:block;padding:23px 2px 18px}.intro h2{font-size:31px}.intro p{font-size:12px}.intro-right{margin-top:14px}.grid{grid-template-columns:1fr}.meter-card{min-height:445px;padding:21px 18px}.reading-wrap{min-height:120px;margin:22px 0 2px;gap:9px}.reading{font-size:clamp(86px,24vw,138px)}.unit{font-size:14px}.gauge{height:77px}.stat-strip{padding-top:22px}.stat{padding:0 9px}.stat-value{font-size:15px}.stat-label{font-size:10px}.side{gap:14px}.control-card{padding:20px}.history-card{min-height:145px}.foot{align-items:flex-start;flex-direction:column;gap:5px}.soft-label{padding:8px 10px}}
+@media(max-width:360px){.reading{font-size:78px}.unit{font-size:12px}.stat-value{font-size:13px}.stat{padding:0 6px}.meter-card{padding:17px 13px}}
+
+/* Lucy wallpaper layer: upload the image as lucy-wallpaper.jpg beside index.html */
+body{position:relative;isolation:isolate;background:var(--bg)}
+body:before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+background:linear-gradient(90deg,rgba(5,8,15,.91) 0%,rgba(5,8,15,.78) 52%,rgba(5,8,15,.62) 100%),
+url("lucy-wallpaper.jpg") center 24%/cover no-repeat;opacity:.92}
+body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+background:radial-gradient(ellipse at 75% 18%,rgba(122,88,255,.15),transparent 42%),
+linear-gradient(180deg,rgba(6,9,17,.12),rgba(6,9,17,.48))}
+.shell{position:relative}
+
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"><svg width="25" height="25" viewBox="0 0 24 24" fill="none"><path d="M3 10v4M7 6v12M11 3v18M15 7v10M19 10v4M22 8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+      <div><h1>声场 <span style="color:#70849a;font-weight:500">/ SOUND FIELD</span></h1><p>SOUND FIELD · LUCY EDITION</p></div>
+    </div>
+    <div class="top-actions">
+      <div id="connectionPill" class="pill"><i class="dot"></i><span id="connectionText">麦克风未连接</span></div>
+      <button id="fullscreenBtn" class="icon-btn" aria-label="切换全屏" title="切换全屏 (F)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M8 4H4v4M16 4h4v4M20 16v4h-4M4 16v4h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div><div class="eyebrow">LIVE ACOUSTIC METER</div><h2>让每一份声音，都有迹可循。</h2><p>赛博朋克风格声场监测。支持 A 计权、参考声级校准、峰值记录与音量趋势。</p></div>
+    <div class="intro-right"><span class="soft-label">本地处理 · 不上传音频</span></div>
+  </section>
+
+  <main class="grid">
+    <section class="card meter-card" aria-label="实时声音读数">
+      <div class="meter-head"><span class="section-kicker">实时声级 / LIVE LEVEL</span><span id="modeChip" class="mode-chip">等待开始</span></div>
+      <div class="reading-wrap"><div id="reading" class="reading">— —</div><span id="unit" class="unit">dB(A)</span></div>
+      <div class="tier-row"><i class="tier-indicator" id="tierDot"></i><span id="tierName" class="tier-name">准备就绪</span><span id="tierNote" class="tier-note">开始测量以读取环境声音</span></div>
+      <div class="gauge-wrap"><canvas id="gauge" class="gauge" aria-label="声级刻度表"></canvas><div class="gauge-caption"><span id="gaugeLeft">30</span><span id="gaugeMiddle">声音强度刻度</span><span id="gaugeRight">110</span></div></div>
+      <div class="stat-strip">
+        <div class="stat"><div class="stat-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>本次最高</div><div id="peakValue" class="stat-value">— —</div><div class="stat-sub">峰值保持</div></div>
+        <div class="stat"><div class="stat-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>监测时长</div><div id="durationValue" class="stat-value">00:00</div><div class="stat-sub">当前测量会话</div></div>
+        <div class="stat"><div class="stat-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4 19V5M4 19h16M8 15l3-4 3 2 5-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>当前模式</div><div id="modeValue" class="stat-value">未校准</div><div id="modeSub" class="stat-sub">相对电平</div></div>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section class="card control-card" aria-label="测量控制与校准">
+        <div class="card-title-row"><h3 class="card-title">测量控制</h3><div class="small-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3a3 3 0 00-3 3v5a3 3 0 006 0V6a3 3 0 00-3-3zM5 10v1a7 7 0 0014 0v-1M12 18v3M8 21h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div></div>
+        <div class="field-label"><label for="micSelect">音频输入设备</label><span>输入源</span></div>
+        <select id="micSelect" class="select"><option value="default">系统默认麦克风</option></select>
+        <p class="field-help">建议选择固定麦克风，并关闭系统的自动增益、降噪或增强处理（如有）。切换设备或改变录音音量后，需要重新校准。</p>
+        <button id="startBtn" class="btn btn-primary"><svg id="startIcon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg><span id="startText">开始监测</span></button>
+        <div class="button-row"><button id="resetBtn" class="btn btn-secondary" disabled>重置峰值 <span class="keyboard">R</span></button><button id="refreshBtn" class="btn btn-secondary" disabled>刷新设备</button></div>
+        <div id="errorBox" class="error-box" role="alert"></div>
+        <div class="divider"></div>
+        <div class="calibration-intro"><div class="calibration-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 19V5M4 19h16M7 15l3-4 3 2 4-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="7" r="2" stroke="currentColor" stroke-width="1.5"/></svg></div><div><strong>参考声级校准</strong><p>使用可信的声级计读数校准当前麦克风，解锁近似 dB(A) 读数与课堂等级。</p></div></div>
+        <div class="field-label"><label for="referenceDb">参考声级计读数</label><span>建议稳定声源</span></div>
+        <div class="calibration-field"><input id="referenceDb" class="number-input" type="number" min="30" max="140" step="0.1" value="80.0" inputmode="decimal" aria-label="参考声级计的 dB(A) 读数"><div class="db-unit">dB(A)</div></div>
+        <button id="calibrateBtn" class="btn btn-secondary calibration-btn" disabled>采集 3 秒并校准</button>
+        <div id="calStatus" class="cal-status" aria-live="polite">连接麦克风后可进行校准。校准参数只保存在本机浏览器。</div>
+        <div class="progress-outer"><div id="calProgress" class="progress-inner"></div></div>
+      </section>
+      <section class="card history-card">
+        <div class="history-top"><h3 class="card-title">声音趋势</h3><span class="history-legend"><i></i><span>最近约 10 秒</span></span></div>
+        <canvas id="history" class="history-chart" aria-label="最近声音变化图"></canvas>
+        <div class="history-foot"><span id="historyLeft">等待声音数据</span><span id="historyRight">—</span></div>
+      </section>
+    </aside>
+  </main>
+
+  <div class="notice"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3l9 17H3L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 9v4M12 16.5v.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><div><strong>关于测量准确度：</strong>未校准时只显示麦克风的相对电平（dBFS(A)），不冒充真实分贝。校准后显示近似 dB(A)，但消费级麦克风的频响、系统音频处理和输入增益仍会影响结果；本工具不是计量认证声级计，不能替代专业测量设备。</div></div>
+  <footer class="foot"><span>声场 SOUND FIELD <b>·</b> 音频只在本机浏览器处理，不录音、不上传。</span><span>快捷键 <span class="key">F</span> 全屏 <span class="key">R</span> 重置峰值</span></footer>
+</div>
+<script>
+'use strict';
+const $ = (id) => document.getElementById(id);
+const dom = {
+  reading:$('reading'), unit:$('unit'), tierName:$('tierName'), tierNote:$('tierNote'), tierDot:$('tierDot'),
+  modeChip:$('modeChip'), modeValue:$('modeValue'), modeSub:$('modeSub'), peakValue:$('peakValue'),
+  durationValue:$('durationValue'), gauge:$('gauge'), history:$('history'), connectionPill:$('connectionPill'),
+  connectionText:$('connectionText'), micSelect:$('micSelect'), startBtn:$('startBtn'), startText:$('startText'),
+  startIcon:$('startIcon'), resetBtn:$('resetBtn'), refreshBtn:$('refreshBtn'), calibrateBtn:$('calibrateBtn'),
+  referenceDb:$('referenceDb'), calStatus:$('calStatus'), calProgress:$('calProgress'), errorBox:$('errorBox'),
+  gaugeLeft:$('gaugeLeft'), gaugeRight:$('gaugeRight'), gaugeMiddle:$('gaugeMiddle'), historyLeft:$('historyLeft'), historyRight:$('historyRight')
+};
+const COLORS = ['#638cf7','#57c7db','#63dbb0','#eac45d','#ff9c5a','#ff667f'];
+const STORAGE_KEY = 'soundfield.calibrations.v1';
+const TIERS = [
+  {max:65,label:'较为安静',color:COLORS[0]},
+  {max:70,label:'安静',color:COLORS[1]},
+  {max:80,label:'普通',color:COLORS[2]},
+  {max:90,label:'激情',color:COLORS[3]},
+  {max:100,label:'较有激情',color:COLORS[4]},
+  {max:Infinity,label:'很有激情',color:COLORS[5]}
+];
+let audioCtx=null,stream=null,source=null,analyser=null,filterNodes=[],dataBuffer=null,rafId=0;
+let running=false,currentDeviceKey='default',calibrationOffset=null,calibrations=readCalibrations();
+let smoothPower=0,lastTick=0,startAt=0,peak=null,currentValue=null,rawDbfs=-120,historyData=[],historyPaintCounter=0,calibrationWindow=null;
+function readCalibrations(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}')}catch(_){return {}}}
+function saveCalibrations(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(calibrations));return true}catch(_){return false}}
+function setCalStatus(s,kind=''){dom.calStatus.textContent=s;dom.calStatus.className='cal-status'+(kind?' '+kind:'')}
+function setError(s=''){dom.errorBox.textContent=s;dom.errorBox.classList.toggle('show',!!s)}
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+function fmtDb(v){return Number.isFinite(v)?v.toFixed(1):'— —'}
+function formatTime(seconds){seconds=Math.max(0,Math.floor(seconds));const h=Math.floor(seconds/3600),m=Math.floor(seconds%3600/60),s=seconds%60;return h>0?`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`:`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`}
+function currentUnit(){return calibrationOffset===null?'dBFS(A)':'dB(A)'}
+function setAccent(color){document.documentElement.style.setProperty('--accent',color);document.documentElement.style.setProperty('--accent-soft',hexToRgba(color,.12))}
+function hexToRgba(hex,a){const n=parseInt(hex.slice(1),16);return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`}
+function tierFor(db){return TIERS.find(t=>db<t.max)||TIERS[TIERS.length-1]}
+
+// Digital A-weighting cascade derived from the analog pole form using a bilinear transform.
+// Pole frequencies are prewarped to the active AudioContext sample rate, then normalized to 0 dB at 1 kHz.
+function makeAWeightingSections(fs){
+  const K=2*fs;
+  const warp=f=>2*fs*Math.tan(Math.PI*f/fs);
+  const [w1,w2,w3,w4]=[20.598997,107.65265,737.86223,12194.217].map(warp);
+  const r1=(w1-K)/(w1+K), r4=(w4-K)/(w4+K);
+  const s1={b:[(K/(K+w1))**2,-2*(K/(K+w1))**2,(K/(K+w1))**2],a:[1,2*r1,r1*r1]};
+  const den0=(K+w2)*(K+w3);
+  const den1=(K+w2)*(w3-K)+(w2-K)*(K+w3);
+  const den2=(w2-K)*(w3-K);
+  const s2={b:[K*K/den0,-2*K*K/den0,K*K/den0],a:[1,den1/den0,den2/den0]};
+  const s3={b:[(w4/(K+w4))**2,2*(w4/(K+w4))**2,(w4/(K+w4))**2],a:[1,2*r4,r4*r4]};
+  const sections=[s1,s2,s3];
+  const responseMag=(section,f)=>{
+    let nr=0,ni=0,dr=0,di=0;const angle=-2*Math.PI*f/fs;
+    section.b.forEach((c,i)=>{nr+=c*Math.cos(angle*i);ni+=c*Math.sin(angle*i)});
+    section.a.forEach((c,i)=>{dr+=c*Math.cos(angle*i);di+=c*Math.sin(angle*i)});
+    return Math.hypot(nr,ni)/Math.max(1e-20,Math.hypot(dr,di));
+  };
+  const total=sections.reduce((p,s)=>p*responseMag(s,1000),1);
+  sections[0].b=sections[0].b.map(v=>v/total);
+  return sections;
+}
+
+function resizeCanvas(canvas){const rect=canvas.getBoundingClientRect();const dpr=Math.min(window.devicePixelRatio||1,2);const w=Math.max(260,Math.round(rect.width*dpr)),h=Math.max(55,Math.round(rect.height*dpr));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h}return {w,h,dpr}}
+function drawGauge(db){
+  const canvas=dom.gauge,ctx=canvas.getContext('2d'),{w,h,dpr}=resizeCanvas(canvas);ctx.clearRect(0,0,w,h);
+  const calibrated=calibrationOffset!==null,min=calibrated?30:-60,max=calibrated?110:0,pad=6*dpr,x0=pad,x1=w-pad,inner=x1-x0;
+  const X=v=>x0+(clamp(v,min,max)-min)/(max-min)*inner;const barY=13*dpr,barH=17*dpr,r=barH/2;
+  ctx.beginPath();ctx.roundRect(x0,barY,inner,barH,r);ctx.fillStyle='rgba(255,255,255,.055)';ctx.fill();
+  if(calibrated){const bounds=[30,65,70,80,90,100,110];const colors=[COLORS[0],COLORS[1],COLORS[2],COLORS[3],COLORS[4],COLORS[5]];for(let i=0;i<colors.length;i++){ctx.fillStyle=colors[i];ctx.globalAlpha=.85;ctx.fillRect(X(bounds[i]),barY,X(bounds[i+1])-X(bounds[i]),barH)}ctx.globalAlpha=1;}
+  else {const grad=ctx.createLinearGradient(x0,0,x1,0);grad.addColorStop(0,'#3576a8');grad.addColorStop(.55,'#4baec3');grad.addColorStop(1,'#62e7c3');ctx.fillStyle=grad;ctx.globalAlpha=.76;ctx.fillRect(x0,barY,inner,barH);ctx.globalAlpha=1}
+  ctx.save();ctx.globalCompositeOperation='destination-in';ctx.beginPath();ctx.roundRect(x0,barY,inner,barH,r);ctx.fill();ctx.restore();
+  ctx.font=`${10*dpr}px system-ui, sans-serif`;ctx.textAlign='center';ctx.fillStyle='#7d8fa5';
+  const ticks=calibrated?[30,40,50,60,70,80,90,100,110]:[-60,-50,-40,-30,-20,-10,0];
+  ticks.forEach(v=>{const x=X(v);ctx.fillStyle='rgba(218,230,243,.24)';ctx.fillRect(x,barY+barH+5*dpr,1*dpr,6*dpr);ctx.fillStyle='#7d8fa5';ctx.fillText(String(v),x,h-6*dpr)});
+  if(Number.isFinite(db)){const x=X(db);ctx.strokeStyle='#f3f9ff';ctx.lineWidth=2*dpr;ctx.beginPath();ctx.moveTo(x,barY-3*dpr);ctx.lineTo(x,barY+barH+9*dpr);ctx.stroke();ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(x,barY+barH/2,4*dpr,0,Math.PI*2);ctx.fill();}
+  dom.gaugeLeft.textContent=calibrated?'30 dB(A)':'−60 dBFS';dom.gaugeRight.textContent=calibrated?'110 dB(A)':'0 dBFS';dom.gaugeMiddle.textContent=calibrated?'A 计权声级':'未校准 · 相对电平';
+}
+function drawHistory(){
+  const canvas=dom.history,ctx=canvas.getContext('2d'),{w,h,dpr}=resizeCanvas(canvas);ctx.clearRect(0,0,w,h);
+  const pad=3*dpr,xx0=pad,xx1=w-pad,yy0=8*dpr,yy1=h-7*dpr;ctx.strokeStyle='rgba(174,197,222,.09)';ctx.lineWidth=1*dpr;
+  for(let i=1;i<=3;i++){const y=yy0+(yy1-yy0)*i/4;ctx.beginPath();ctx.moveTo(xx0,y);ctx.lineTo(xx1,y);ctx.stroke()}
+  if(historyData.length<2){dom.historyLeft.textContent=running?'正在采集声音…':'等待声音数据';dom.historyRight.textContent='—';return}
+  const vals=historyData.map(p=>p.v),calibrated=calibrationOffset!==null,min=calibrated?30:-65,max=calibrated?110:0;
+  const n=historyData.length;ctx.beginPath();historyData.forEach((p,i)=>{const x=xx0+(xx1-xx0)*i/Math.max(1,n-1),y=yy1-(clamp(p.v,min,max)-min)/(max-min)*(yy1-yy0);if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)});
+  ctx.lineTo(xx1,yy1);ctx.lineTo(xx0,yy1);ctx.closePath();const fill=ctx.createLinearGradient(0,yy0,0,yy1);fill.addColorStop(0,hexToRgba(getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()||'#50e3c2',.22));fill.addColorStop(1,'rgba(80,227,194,0)');ctx.fillStyle=fill;ctx.fill();
+  ctx.beginPath();historyData.forEach((p,i)=>{const x=xx0+(xx1-xx0)*i/Math.max(1,n-1),y=yy1-(clamp(p.v,min,max)-min)/(max-min)*(yy1-yy0);if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)});ctx.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()||'#50e3c2';ctx.lineWidth=1.8*dpr;ctx.lineJoin='round';ctx.lineCap='round';ctx.stroke();
+  dom.historyLeft.textContent=`最低 ${Math.min(...vals).toFixed(1)}`;dom.historyRight.textContent=`最高 ${Math.max(...vals).toFixed(1)} ${calibrated?'dB(A)':'dBFS(A)'}`;
+}
+function renderIdle(){dom.reading.textContent='— —';dom.unit.textContent=currentUnit();dom.tierName.textContent='准备就绪';dom.tierNote.textContent='开始测量以读取环境声音';dom.tierDot.style.background='var(--accent)';dom.tierDot.style.boxShadow='0 0 15px var(--accent)';dom.peakValue.textContent='— —';dom.durationValue.textContent='00:00';dom.modeValue.textContent=calibrationOffset===null?'未校准':'已校准';dom.modeSub.textContent=calibrationOffset===null?'相对电平':'参考声级';dom.modeChip.textContent=calibrationOffset===null?'相对模式':'已完成校准';dom.modeChip.classList.toggle('ready',calibrationOffset!==null);setAccent('#50e3c2');drawGauge(NaN);drawHistory()}
+function renderValue(db){
+  const calibrated=calibrationOffset!==null;const displayDb=db;currentValue=displayDb;
+  dom.reading.textContent=fmtDb(displayDb);dom.unit.textContent=currentUnit();
+  if(calibrated){const t=tierFor(displayDb);setAccent(t.color);dom.tierName.textContent=t.label;dom.tierNote.textContent='根据 dB(A) 阈值分级';dom.tierDot.style.background=t.color;dom.tierDot.style.boxShadow=`0 0 15px ${t.color}`;dom.modeChip.textContent='已校准读数';dom.modeChip.classList.add('ready');dom.modeValue.textContent='dB(A)';dom.modeSub.textContent='近似声压级';}
+  else {setAccent('#50e3c2');dom.tierName.textContent='相对音量';dom.tierNote.textContent='校准后可启用分贝等级';dom.tierDot.style.background='var(--accent)';dom.tierDot.style.boxShadow='0 0 15px var(--accent)';dom.modeChip.textContent='未校准 · 相对电平';dom.modeChip.classList.remove('ready');dom.modeValue.textContent='dBFS(A)';dom.modeSub.textContent='不是实际声压级';}
+  if(peak===null||displayDb>peak)peak=displayDb;
+  dom.peakValue.innerHTML=`${fmtDb(peak)} <small>${currentUnit()}</small>`;
+  dom.durationValue.textContent=formatTime((performance.now()-startAt)/1000);
+  drawGauge(displayDb);
+}
+function updateCalibrationState(){
+  calibrationOffset=calibrations[currentDeviceKey]&&Number.isFinite(calibrations[currentDeviceKey].offset)?calibrations[currentDeviceKey].offset:null;
+  if(calibrationOffset!==null){setCalStatus(`当前麦克风已校准（${new Date(calibrations[currentDeviceKey].time||Date.now()).toLocaleDateString()}）。如改变输入音量或音频处理，请重新校准。`,'good')}
+  else{setCalStatus('当前麦克风尚未校准。请输入参考声级计的读数再开始校准。')}
+  renderIdle();
+}
+function setConnection(active){dom.connectionPill.classList.toggle('live',active);dom.connectionText.textContent=active?'麦克风已连接':'麦克风未连接'}
+function setRunningUI(active){dom.startText.textContent=active?'停止监测':'开始监测';dom.startIcon.innerHTML=active?'<path d="M6 6h12v12H6z"/>':'<path d="M8 5v14l11-7z"/>';dom.startBtn.classList.toggle('stop',active);dom.resetBtn.disabled=!active;dom.refreshBtn.disabled=!active;dom.calibrateBtn.disabled=!active||!!calibrationWindow;dom.micSelect.disabled=!!calibrationWindow;setConnection(active)}
+async function refreshDevices(preferredId){
+  if(!navigator.mediaDevices||!navigator.mediaDevices.enumerateDevices)return;
+  let devices;try{devices=(await navigator.mediaDevices.enumerateDevices()).filter(d=>d.kind==='audioinput')}catch(_){return}
+  const previous=preferredId||dom.micSelect.value;dom.micSelect.innerHTML='';
+  const fallback=document.createElement('option');fallback.value='default';fallback.textContent='系统默认麦克风';dom.micSelect.appendChild(fallback);
+  devices.forEach((d,i)=>{if(!d.deviceId||d.deviceId==='default')return;const op=document.createElement('option');op.value=d.deviceId;op.textContent=d.label||`麦克风 ${i+1}`;dom.micSelect.appendChild(op)});
+  if(previous&&Array.from(dom.micSelect.options).some(o=>o.value===previous))dom.micSelect.value=previous;else dom.micSelect.value='default';
+}
+async function startMeasurement(requestedDevice){
+  setError('');
+  try{
+    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)throw new Error('当前浏览器未开放麦克风接口。请使用最新版 Edge 或 Chrome，并通过“启动.bat”打开本工具。');
+    const constraints={audio:{echoCancellation:false,noiseSuppression:false,autoGainControl:false,channelCount:{ideal:1}},video:false};
+    if(requestedDevice&&requestedDevice!=='default')constraints.audio.deviceId={exact:requestedDevice};
+    audioCtx=new (window.AudioContext||window.webkitAudioContext)();await audioCtx.resume();
+    stream=await navigator.mediaDevices.getUserMedia(constraints);
+    source=audioCtx.createMediaStreamSource(stream);let node=source;
+    const sections=makeAWeightingSections(audioCtx.sampleRate);
+    filterNodes=sections.map(s=>audioCtx.createIIRFilter(s.b,s.a));filterNodes.forEach(f=>{node.connect(f);node=f});
+    analyser=audioCtx.createAnalyser();analyser.fftSize=2048;analyser.smoothingTimeConstant=0;node.connect(analyser);dataBuffer=new Float32Array(analyser.fftSize);
+    const track=stream.getAudioTracks()[0],settings=track&&track.getSettings?track.getSettings():{};
+    currentDeviceKey=settings.deviceId||((requestedDevice&&requestedDevice!=='default')?requestedDevice:'default');
+    await refreshDevices(currentDeviceKey);
+    if(!Array.from(dom.micSelect.options).some(o=>o.value===currentDeviceKey))currentDeviceKey='default';
+    dom.micSelect.value=currentDeviceKey;
+    running=true;smoothPower=0;lastTick=performance.now();startAt=performance.now();peak=null;currentValue=null;historyData=[];historyPaintCounter=0;calibrationWindow=null;
+    updateCalibrationState();setRunningUI(true);dom.calibrateBtn.disabled=false;dom.micSelect.disabled=false;
+    if(calibrationOffset===null)setCalStatus('未校准模式：当前显示 dBFS(A) 相对电平，不是真实 dB(A)。');
+    else setCalStatus('已载入本机保存的校准值。测量前请确认麦克风和录音音量未改变。','good');
+    renderValue(rawDbfs+ (calibrationOffset===null?0:calibrationOffset));
+    if(dom.startBtn.requestFullscreen && false){} // Fullscreen is user-controlled; avoid unexpected permission changes.
+    rafId=requestAnimationFrame(tick);
+  }catch(e){await releaseAudio();setRunningUI(false);setError('无法启动麦克风：'+(e&&e.message?e.message:String(e))+'\n\n请检查浏览器麦克风权限、系统输入设备和是否被其他程序占用。通过 localhost 打开比直接双击 HTML 更可靠。')}
+}
+async function releaseAudio(){running=false;if(rafId)cancelAnimationFrame(rafId);rafId=0;calibrationWindow=null;if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}if(audioCtx){try{await audioCtx.close()}catch(_){}audioCtx=null}source=null;analyser=null;filterNodes=[];dataBuffer=null}
+async function stopMeasurement(){await releaseAudio();setRunningUI(false);dom.micSelect.disabled=false;dom.calibrateBtn.disabled=true;dom.calProgress.style.width='0%';dom.durationValue.textContent='00:00';dom.reading.textContent='— —';dom.tierName.textContent='监测已停止';dom.tierNote.textContent='点击“开始监测”重新启动';dom.modeChip.textContent=calibrationOffset===null?'相对模式':'已完成校准';dom.peakValue.textContent=peak===null?'— —':`${fmtDb(peak)} ${currentUnit()}`;drawHistory()}
+function tick(){
+  if(!running||!analyser||!dataBuffer)return;
+  analyser.getFloatTimeDomainData(dataBuffer);let sum=0;for(let i=0;i<dataBuffer.length;i++)sum+=dataBuffer[i]*dataBuffer[i];const power=sum/dataBuffer.length;
+  const now=performance.now(),dt=clamp((now-lastTick)/1000,.005,.1);lastTick=now;
+  const alpha=1-Math.exp(-dt/.125);smoothPower=alpha*power+(1-alpha)*smoothPower;
+  rawDbfs=10*Math.log10(Math.max(smoothPower,1e-12));
+  const value=rawDbfs+(calibrationOffset===null?0:calibrationOffset);renderValue(value);
+  historyData.push({t:now,v:value});const cutoff=now-10000;while(historyData.length&&historyData[0].t<cutoff)historyData.shift();
+  historyPaintCounter++;if(historyPaintCounter%5===0)drawHistory();
+  if(calibrationWindow){
+    calibrationWindow.powerTime+=power*dt;calibrationWindow.duration+=dt;const elapsed=now-calibrationWindow.started;dom.calProgress.style.width=`${clamp(elapsed/3000*100,0,100)}%`;setCalStatus(`正在采集稳定声场… ${Math.min(3,elapsed/1000).toFixed(1)} / 3.0 秒`);
+    if(elapsed>=3000)finishCalibration();
+  }
+  rafId=requestAnimationFrame(tick);
+}
+function beginCalibration(){
+  if(!running){setCalStatus('请先开始监测并允许麦克风访问。','error');return}
+  const reference=Number(dom.referenceDb.value);if(!Number.isFinite(reference)||reference<30||reference>140){setCalStatus('请输入 30–140 dB(A) 范围内的参考读数。','error');return}
+  calibrationWindow={started:performance.now(),powerTime:0,duration:0,reference};dom.calibrateBtn.disabled=true;dom.micSelect.disabled=true;dom.calProgress.style.width='0%';
+  setCalStatus('请将麦克风和参考声级计放在一起，对准同一稳定声源。');
+}
+function finishCalibration(){
+  const win=calibrationWindow;calibrationWindow=null;dom.calibrateBtn.disabled=false;dom.micSelect.disabled=false;
+  dom.calProgress.style.width='100%';
+  if(!win||win.duration<=0){setCalStatus('采集失败，请重试。','error');return}
+  const avgPower=win.powerTime/win.duration,measured=10*Math.log10(Math.max(avgPower,1e-15));
+  if(measured < -80){setCalStatus('麦克风收到的声音过弱，无法可靠校准。请提高声源音量/输入增益后再试。','error');return}
+  if(measured > -1){setCalStatus('输入信号可能已经削波。请降低录音增益或声源音量后重新校准。','error');return}
+  const offset=win.reference-measured;calibrations[currentDeviceKey]={offset,time:Date.now(),reference:win.reference,sampleRate:audioCtx?audioCtx.sampleRate:null};const persisted=saveCalibrations();calibrationOffset=offset;
+  setCalStatus(persisted?`校准成功：修正值 ${offset>=0?'+':''}${offset.toFixed(2)} dB。校准参数已保存在本机。`:`校准成功（修正值 ${offset>=0?'+':''}${offset.toFixed(2)} dB），但浏览器不允许保存设置；关闭页面后需重新校准。`,persisted?'good':'error');dom.calProgress.style.width='100%';
+  peak=currentValue;renderValue(rawDbfs+calibrationOffset);
+}
+async function onStartClick(){if(running){await stopMeasurement();return}await startMeasurement(dom.micSelect.value)}
+async function onMicChange(){if(running){const id=dom.micSelect.value;await stopMeasurement();await startMeasurement(id)}}
+async function toggleFullscreen(){try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen();else await document.exitFullscreen()}catch(_) {}}
+dom.startBtn.addEventListener('click',onStartClick);dom.micSelect.addEventListener('change',onMicChange);dom.calibrateBtn.addEventListener('click',beginCalibration);dom.fullscreenBtn.addEventListener('click',toggleFullscreen);
+dom.resetBtn.addEventListener('click',()=>{peak=currentValue;dom.peakValue.textContent=peak===null?'— —':`${fmtDb(peak)} ${currentUnit()}`});
+dom.refreshBtn.addEventListener('click',()=>refreshDevices(currentDeviceKey));
+document.addEventListener('keydown',e=>{if(e.target&&['INPUT','SELECT','TEXTAREA'].includes(e.target.tagName))return;if(e.key==='f'||e.key==='F')toggleFullscreen();if(e.key==='r'||e.key==='R')dom.resetBtn.click()});
+window.addEventListener('resize',()=>{drawGauge(currentValue===null?NaN:currentValue);drawHistory()});window.addEventListener('pagehide',()=>{if(stream)stream.getTracks().forEach(t=>t.stop())});
+(async()=>{await refreshDevices();renderIdle();setRunningUI(false);setCalStatus('连接麦克风后可进行校准。校准参数只保存在本机浏览器。');drawHistory()})();
+</script>
+</body>
+</html>
